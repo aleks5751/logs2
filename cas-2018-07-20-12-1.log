@@ -1,0 +1,1028 @@
+2018-07-20 12:55:44,575 INFO [org.apereo.cas.mgmt.web.CasManagementWebApplicationServletInitializer] - <The following profiles are active: standalone>
+2018-07-20 12:55:56,344 WARN [com.zaxxer.hikari.HikariConfig] - <HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.>
+2018-07-20 12:55:56,345 WARN [com.zaxxer.hikari.HikariConfig] - <HikariPool-1 - leakDetectionThreshold is less than 2000ms or more than maxLifetime, disabling it.>
+2018-07-20 12:55:56,345 INFO [com.zaxxer.hikari.HikariDataSource] - <HikariPool-1 - Starting...>
+2018-07-20 12:55:56,531 INFO [com.zaxxer.hikari.pool.PoolBase] - <HikariPool-1 - Driver does not support get/set network timeout for connections. (Method org.postgresql.jdbc.PgConnection.getNetworkTimeout() is not yet implemented.)>
+2018-07-20 12:55:56,581 INFO [com.zaxxer.hikari.HikariDataSource] - <HikariPool-1 - Start completed.>
+2018-07-20 12:56:07,978 DEBUG [org.apereo.cas.config.CasCoreAuthenticationConfiguration] - <Configuring authentication execution plan [CasCoreAuthenticationHandlersConfiguration]>
+2018-07-20 12:56:07,986 DEBUG [org.apereo.cas.config.CasCoreAuthenticationConfiguration] - <Configuring authentication execution plan [CasCoreAuthenticationHandlersConfiguration]>
+2018-07-20 12:56:08,026 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationEventExecutionPlan] - <Registering handler [HttpBasedServiceCredentialsAuthenticationHandler] principal resolver [org.apereo.cas.authentication.principal.resolvers.ProxyingPrincipalResolver@20c8d155[]] into the execution plan>
+2018-07-20 12:56:08,027 DEBUG [org.apereo.cas.config.CasCoreAuthenticationConfiguration] - <Configuring authentication execution plan [CasCoreAuthenticationMetadataConfiguration]>
+2018-07-20 12:56:08,066 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationEventExecutionPlan] - <Registering metadata populator [org.apereo.cas.authentication.metadata.SuccessfulHandlerMetaDataPopulator@6f21087[order=-2147483648]] into the execution plan>
+2018-07-20 12:56:08,082 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationEventExecutionPlan] - <Registering metadata populator [org.apereo.cas.authentication.metadata.RememberMeAuthenticationMetaDataPopulator@7056fbee[order=-2147483648]] into the execution plan>
+2018-07-20 12:56:09,117 DEBUG [org.apereo.cas.services.ServiceRegistryInitializer] - <Service registry contains [21] service definitions>
+2018-07-20 12:56:09,117 INFO [org.apereo.cas.services.ServiceRegistryInitializer] - <The service registry database will not be initialized from default JSON services. If the service registry database ends up empty, CAS will refuse to authenticate services until service definitions are added to the registry. To auto-initialize the service registry, set 'cas.serviceRegistry.initFromJson=true' in your CAS settings.>
+2018-07-20 12:56:10,253 INFO [org.mongodb.driver.cluster] - <Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}>
+2018-07-20 12:56:10,342 INFO [org.mongodb.driver.cluster] - <Exception in monitor thread while connecting to server localhost:27017>
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63) ~[mongo-java-driver-3.4.2.jar:?]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115) ~[mongo-java-driver-3.4.2.jar:?]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113) ~[mongo-java-driver-3.4.2.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_171]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[?:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_171]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57) ~[mongo-java-driver-3.4.2.jar:?]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongo-java-driver-3.4.2.jar:?]
+	... 3 more
+2018-07-20 12:56:29,753 DEBUG [org.apereo.cas.configuration.support.Beans] - <No password encoder shall be created given the requested encoder type [NONE]>
+2018-07-20 12:56:30,212 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Loading services from [JpaServiceRegistryDaoImpl]>
+2018-07-20 12:56:31,691 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:56:31,701 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.212.255.185:8451/oauth/response]>
+2018-07-20 12:56:31,702 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://sso-fe1.arendus.kit/oauth2.0/callbackAuthorize.*]>
+2018-07-20 12:56:31,702 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:56:31,702 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:56:31,702 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:56:31,703 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:56:31,703 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:56:31,703 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:56:31,704 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:56:31,704 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.209.194.132:8451/oauth/response]>
+2018-07-20 12:56:31,704 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.253.6.231:8451/oauth/response]>
+2018-07-20 12:56:31,704 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.208.156.133:8451/oauth/response]>
+2018-07-20 12:56:31,705 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://localhost:8451/oauth/response]>
+2018-07-20 12:56:31,714 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.254.199.82:8451/oauth/response]>
+2018-07-20 12:56:31,715 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.254.253.9:8451/oauth/response]>
+2018-07-20 12:56:31,715 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.19.48.81:8451/oauth/response]>
+2018-07-20 12:56:31,716 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.247.105.166:8451/oauth/response]>
+2018-07-20 12:56:31,716 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.242.115.177:8451/oauth/response]>
+2018-07-20 12:56:31,716 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.245.99.126:8451/oauth/response]>
+2018-07-20 12:56:31,730 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.245.133.138:8451/oauth/response]>
+2018-07-20 12:56:31,733 INFO [org.apereo.cas.services.DefaultServicesManager] - <Loaded [21] service(s) from [JpaServiceRegistryDaoImpl].>
+2018-07-20 12:56:31,865 WARN [org.apereo.cas.config.CasCoreServicesConfiguration] - <Runtime memory is used as the persistence storage for retrieving and persisting service definitions. Changes that are made to service definitions during runtime WILL be LOST upon container restarts.>
+2018-07-20 12:56:31,974 DEBUG [org.apereo.cas.config.CasPersonDirectoryConfiguration] - <Final list of attribute repositories is [[]]>
+2018-07-20 12:56:32,002 DEBUG [org.apereo.cas.config.CasPersonDirectoryConfiguration] - <Configured merging strategy for attribute sources is [REPLACE]>
+2018-07-20 12:56:32,088 DEBUG [org.apereo.cas.config.CasPersonDirectoryConfiguration] - <No attribute repository sources are available/defined to merge together.>
+2018-07-20 12:56:32,840 INFO [org.apereo.cas.mgmt.web.CasManagementWebApplicationServletInitializer] - <Started CasManagementWebApplicationServletInitializer in 60.762 seconds (JVM running for 106.86)>
+2018-07-20 12:56:52,820 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Loading services from [JpaServiceRegistryDaoImpl]>
+2018-07-20 12:56:54,260 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:56:54,260 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.212.255.185:8451/oauth/response]>
+2018-07-20 12:56:54,260 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://sso-fe1.arendus.kit/oauth2.0/callbackAuthorize.*]>
+2018-07-20 12:56:54,261 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:56:54,261 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:56:54,261 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:56:54,261 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:56:54,261 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:56:54,261 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:56:54,261 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:56:54,261 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.209.194.132:8451/oauth/response]>
+2018-07-20 12:56:54,261 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.253.6.231:8451/oauth/response]>
+2018-07-20 12:56:54,261 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.208.156.133:8451/oauth/response]>
+2018-07-20 12:56:54,261 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://localhost:8451/oauth/response]>
+2018-07-20 12:56:54,261 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.254.199.82:8451/oauth/response]>
+2018-07-20 12:56:54,261 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.254.253.9:8451/oauth/response]>
+2018-07-20 12:56:54,262 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.19.48.81:8451/oauth/response]>
+2018-07-20 12:56:54,262 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.247.105.166:8451/oauth/response]>
+2018-07-20 12:56:54,262 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.242.115.177:8451/oauth/response]>
+2018-07-20 12:56:54,262 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.245.99.126:8451/oauth/response]>
+2018-07-20 12:56:54,262 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.245.133.138:8451/oauth/response]>
+2018-07-20 12:56:54,262 INFO [org.apereo.cas.services.DefaultServicesManager] - <Loaded [21] service(s) from [JpaServiceRegistryDaoImpl].>
+[32m2018-07-20 12:57:08,258 INFO [org.apereo.cas.configuration.config.CasCoreBootstrapStandaloneConfiguration] - <Configuration files found at [/etc/cas/config] are [[/etc/cas/config/application.properties]]>[m
+[32m2018-07-20 12:57:08,394 INFO [org.apereo.cas.configuration.config.CasCoreBootstrapStandaloneConfiguration] - <Found and loaded [124] setting(s) from [/etc/cas/config]>[m
+[32m2018-07-20 12:57:08,396 INFO [org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration] - <Located property source: PropertiesPropertySource {name='standaloneCasConfigService'}>[m
+2018-07-20 12:57:08,772 INFO [org.apereo.cas.web.CasWebApplicationServletInitializer] - <The following profiles are active: standalone>
+2018-07-20 12:57:27,679 WARN [org.apereo.cas.config.CasCoreTicketsConfiguration] - <Runtime memory is used as the persistence storage for retrieving and managing tickets. Tickets that are issued during runtime will be LOST upon container restarts. This MAY impact SSO functionality.>
+2018-07-20 12:57:27,696 DEBUG [org.apereo.cas.configuration.support.Beans] - <Ticket registry encryption/signing is turned off. This MAY NOT be safe in a clustered production environment. Consider using other choices to handle encryption, signing and verification of ticket registry tickets, and verify the chosen ticket registry does support this behavior.>
+2018-07-20 12:57:39,692 WARN [com.zaxxer.hikari.HikariConfig] - <HikariPool-2 - idleTimeout is close to or more than maxLifetime, disabling it.>
+2018-07-20 12:57:39,692 WARN [com.zaxxer.hikari.HikariConfig] - <HikariPool-2 - leakDetectionThreshold is less than 2000ms or more than maxLifetime, disabling it.>
+2018-07-20 12:57:39,692 INFO [com.zaxxer.hikari.HikariDataSource] - <HikariPool-2 - Starting...>
+2018-07-20 12:57:40,068 INFO [com.zaxxer.hikari.pool.PoolBase] - <HikariPool-2 - Driver does not support get/set network timeout for connections. (Method org.postgresql.jdbc.PgConnection.getNetworkTimeout() is not yet implemented.)>
+2018-07-20 12:57:40,138 INFO [com.zaxxer.hikari.HikariDataSource] - <HikariPool-2 - Start completed.>
+2018-07-20 12:57:46,804 INFO [ee.ria.sso.config.banklink.BanklinkConfiguration] - <Start initializing banklink configuration...>
+2018-07-20 12:57:47,604 INFO [ee.ria.sso.config.banklink.BanklinkConfiguration] - <Banklink for seb initialized successfully using configuration: BankConfiguration{url='https://www.seb.ee/cgi-bin/dv.sh/ipank.r', senderId='testvpos', receiverId='EYP', publicKeyAlias='seb', privateKeyAlias='seb_priv', nonceExpirationInSeconds=3600, privateKeyPass='*******', responseParserClass='com.nortal.banklink.authentication.link.standard.IPizzaStandardAuthInfoParser', tryReEncodes=[]}>
+2018-07-20 12:57:47,795 INFO [ee.ria.sso.config.banklink.BanklinkConfiguration] - <Banklink for luminor initialized successfully using configuration: BankConfiguration{url='https://netbank.nordea.com/pnbeidtest/eidp.jsp', senderId='23456789', receiverId='NORDEA', publicKeyAlias='luminor', privateKeyAlias='luminor_priv', nonceExpirationInSeconds=3600, privateKeyPass='*******', responseParserClass='com.nortal.banklink.authentication.link.standard.IPizzaStandardAuthInfoParser', tryReEncodes=[ISO-8859-1, windows-1252]}>
+2018-07-20 12:57:48,002 INFO [ee.ria.sso.config.banklink.BanklinkConfiguration] - <Banklink for coop initialized successfully using configuration: BankConfiguration{url='http://banklink-mock.ci.kit:8990/ipizza/auth', senderId='RIA', receiverId='COOP', publicKeyAlias='coop', privateKeyAlias='coop_priv', nonceExpirationInSeconds=3600, privateKeyPass='*******', responseParserClass='com.nortal.banklink.authentication.link.standard.IPizzaStandardAuthInfoParser', tryReEncodes=[]}>
+2018-07-20 12:57:48,128 INFO [ee.ria.sso.config.banklink.BanklinkConfiguration] - <Banklink for swedbank initialized successfully using configuration: BankConfiguration{url='http://banklink-mock.ci.kit:8990/ipizza/auth', senderId='RIA', receiverId='SWED', publicKeyAlias='swedbank', privateKeyAlias='swedbank_priv', nonceExpirationInSeconds=3600, privateKeyPass='*******', responseParserClass='com.nortal.banklink.authentication.link.standard.IPizzaStandardAuthInfoParser', tryReEncodes=[]}>
+2018-07-20 12:57:48,292 INFO [ee.ria.sso.config.banklink.BanklinkConfiguration] - <Banklink for lhv initialized successfully using configuration: BankConfiguration{url='http://banklink-mock.ci.kit:8990/ipizza/auth', senderId='RIA', receiverId='LHV', publicKeyAlias='lhv', privateKeyAlias='lhv_priv', nonceExpirationInSeconds=3600, privateKeyPass='*******', responseParserClass='ee.ria.sso.service.banklink.StandardAuthInfoParserWithReversedNameFormat', tryReEncodes=[]}>
+2018-07-20 12:57:48,415 INFO [ee.ria.sso.config.banklink.BanklinkConfiguration] - <Banklink for danske initialized successfully using configuration: BankConfiguration{url='http://2120b7fd.ngrok.io/ipizza/auth', senderId='RIA', receiverId='DANSKE', publicKeyAlias='danske', privateKeyAlias='danske_priv', nonceExpirationInSeconds=3600, privateKeyPass='*******', responseParserClass='com.nortal.banklink.authentication.link.standard.IPizzaStandardAuthInfoParser', tryReEncodes=[]}>
+2018-07-20 12:57:48,415 INFO [ee.ria.sso.config.banklink.BanklinkConfiguration] - <6 banklink(s) configured!>
+2018-07-20 12:57:51,953 ERROR [ee.ria.sso.status.HeartbeatEndpoint] - <Failed to initialize application git info>
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.boot.info.GitProperties' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:353) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:351) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:340) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1090) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at ee.ria.sso.status.HeartbeatEndpoint.setApplicationGitProperties(HeartbeatEndpoint.java:160) ~[classes/:5.1.4]
+	at ee.ria.sso.status.HeartbeatEndpoint.setUp(HeartbeatEndpoint.java:87) ~[classes/:5.1.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_171]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:311) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:134) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.boot.web.support.SpringBootServletInitializer.run(SpringBootServletInitializer.java:151) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.boot.web.support.SpringBootServletInitializer.createRootApplicationContext(SpringBootServletInitializer.java:131) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.boot.web.support.SpringBootServletInitializer.onStartup(SpringBootServletInitializer.java:86) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.web.SpringServletContainerInitializer.onStartup(SpringServletContainerInitializer.java:169) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5244) ~[catalina.jar:8.0.32]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:147) ~[catalina.jar:8.0.32]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725) ~[catalina.jar:8.0.32]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701) ~[catalina.jar:8.0.32]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717) ~[catalina.jar:8.0.32]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:939) ~[catalina.jar:8.0.32]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1812) ~[catalina.jar:8.0.32]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_171]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_171]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_171]
+2018-07-20 12:57:54,267 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Loading services from [JpaServiceRegistryDaoImpl]>
+2018-07-20 12:57:55,751 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:57:55,751 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.212.255.185:8451/oauth/response]>
+2018-07-20 12:57:55,751 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://sso-fe1.arendus.kit/oauth2.0/callbackAuthorize.*]>
+2018-07-20 12:57:55,751 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:57:55,751 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:57:55,751 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:57:55,751 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:57:55,751 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:57:55,752 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:57:55,752 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:57:55,752 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.209.194.132:8451/oauth/response]>
+2018-07-20 12:57:55,752 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.253.6.231:8451/oauth/response]>
+2018-07-20 12:57:55,752 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.208.156.133:8451/oauth/response]>
+2018-07-20 12:57:55,752 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://localhost:8451/oauth/response]>
+2018-07-20 12:57:55,752 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.254.199.82:8451/oauth/response]>
+2018-07-20 12:57:55,753 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.254.253.9:8451/oauth/response]>
+2018-07-20 12:57:55,753 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.19.48.81:8451/oauth/response]>
+2018-07-20 12:57:55,753 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.247.105.166:8451/oauth/response]>
+2018-07-20 12:57:55,753 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.242.115.177:8451/oauth/response]>
+2018-07-20 12:57:55,753 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.245.99.126:8451/oauth/response]>
+2018-07-20 12:57:55,753 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.245.133.138:8451/oauth/response]>
+2018-07-20 12:57:55,762 INFO [org.apereo.cas.services.DefaultServicesManager] - <Loaded [21] service(s) from [JpaServiceRegistryDaoImpl].>
+2018-07-20 12:57:59,450 DEBUG [org.apereo.cas.config.CasCoreTicketsConfiguration] - <Ticket-granting ticket expiration policy is based on hard/idle timeouts of [28800]/[7200] seconds>
+2018-07-20 12:58:00,673 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.fd.usage, value=3.5572052001953125E-4>
+2018-07-20 12:58:00,673 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-MarkSweep.count, value=4>
+2018-07-20 12:58:00,673 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-MarkSweep.time, value=2935>
+2018-07-20 12:58:00,673 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-Scavenge.count, value=37>
+2018-07-20 12:58:00,673 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-Scavenge.time, value=4738>
+2018-07-20 12:58:00,673 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.committed, value=1468006400>
+2018-07-20 12:58:00,673 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.init, value=1073741824>
+2018-07-20 12:58:00,673 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.max, value=1908932608>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.usage, value=0.2587265815095763>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.used, value=493891608>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.committed, value=188964864>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.init, value=2555904>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.max, value=-1>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.usage, value=-1.84898768E8>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.used, value=184898832>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.committed, value=40108032>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.init, value=2555904>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.max, value=251658240>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.usage, value=0.15523605346679686>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.used, value=39066432>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.committed, value=16515072>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.init, value=0>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.max, value=1073741824>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.usage, value=0.014902934432029724>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.used, value=16001904>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.committed, value=132341760>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.init, value=0>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.max, value=-1>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.usage, value=0.9810404214059115>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.used, value=129832616>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.committed, value=414711808>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.init, value=268435456>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.max, value=444596224>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.usage, value=0.5750457835647295>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.used, value=255663184>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.used-after-gc, value=0>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.committed, value=913833984>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.init, value=716177408>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.max, value=1431830528>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.usage, value=0.14641200330658127>
+2018-07-20 12:58:00,674 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.used, value=209637176>
+2018-07-20 12:58:00,675 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.used-after-gc, value=189019840>
+2018-07-20 12:58:00,675 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.committed, value=139460608>
+2018-07-20 12:58:00,675 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.init, value=44564480>
+2018-07-20 12:58:00,675 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.max, value=139460608>
+2018-07-20 12:58:00,675 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.usage, value=0.20501307437294408>
+2018-07-20 12:58:00,675 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.used, value=28591248>
+2018-07-20 12:58:00,675 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.used-after-gc, value=28591248>
+2018-07-20 12:58:00,675 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.committed, value=1656971264>
+2018-07-20 12:58:00,675 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.init, value=1076297728>
+2018-07-20 12:58:00,675 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.max, value=1908932607>
+2018-07-20 12:58:00,675 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.used, value=678795488>
+2018-07-20 12:58:00,675 DEBUG [org.apereo.cas.config.CasCoreConfiguration] - <Configuring authentication request service selection strategy plan [CasCoreAuthenticationServiceSelectionStrategyConfiguration]>
+2018-07-20 12:58:00,699 DEBUG [org.apereo.cas.config.CasCoreConfiguration] - <Configuring authentication request service selection strategy plan [CasOAuthAuthenticationServiceSelectionStrategyConfiguration]>
+2018-07-20 12:58:00,709 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.blocked.count, value=0>
+2018-07-20 12:58:00,710 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.count, value=21>
+2018-07-20 12:58:00,710 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.daemon.count, value=19>
+2018-07-20 12:58:00,736 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.deadlock.count, value=0>
+2018-07-20 12:58:00,737 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.deadlocks, value=[]>
+2018-07-20 12:58:00,737 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.new.count, value=0>
+2018-07-20 12:58:00,737 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.runnable.count, value=5>
+2018-07-20 12:58:00,737 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.terminated.count, value=0>
+2018-07-20 12:58:00,737 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.timed_waiting.count, value=11>
+2018-07-20 12:58:00,737 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.waiting.count, value=5>
+2018-07-20 12:58:03,136 DEBUG [org.apereo.cas.config.CasCoreAuthenticationConfiguration] - <Configuring authentication execution plan [CasCoreAuthenticationHandlersConfiguration]>
+2018-07-20 12:58:03,180 DEBUG [org.apereo.cas.config.CasCoreAuthenticationConfiguration] - <Configuring authentication execution plan [CasCoreAuthenticationHandlersConfiguration]>
+2018-07-20 12:58:03,286 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationEventExecutionPlan] - <Registering handler [HttpBasedServiceCredentialsAuthenticationHandler] principal resolver [org.apereo.cas.authentication.principal.resolvers.ProxyingPrincipalResolver@63e3b066[]] into the execution plan>
+2018-07-20 12:58:03,315 DEBUG [org.apereo.cas.config.CasCoreAuthenticationConfiguration] - <Configuring authentication execution plan [CasCoreAuthenticationMetadataConfiguration]>
+2018-07-20 12:58:03,383 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationEventExecutionPlan] - <Registering metadata populator [org.apereo.cas.authentication.metadata.SuccessfulHandlerMetaDataPopulator@5f9a8213[order=-2147483648]] into the execution plan>
+2018-07-20 12:58:03,421 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationEventExecutionPlan] - <Registering metadata populator [org.apereo.cas.authentication.metadata.RememberMeAuthenticationMetaDataPopulator@592a4a27[order=-2147483648]] into the execution plan>
+2018-07-20 12:58:03,422 DEBUG [org.apereo.cas.config.CasCoreAuthenticationConfiguration] - <Configuring authentication execution plan [AcceptUsersAuthenticationEventExecutionPlanConfiguration]>
+2018-07-20 12:58:03,422 WARN [org.apereo.cas.config.support.authentication.AcceptUsersAuthenticationEventExecutionPlanConfiguration] - <[36m>
+2018-07-20 12:58:03,427 WARN [org.apereo.cas.config.support.authentication.AcceptUsersAuthenticationEventExecutionPlanConfiguration] - <
+
+  ____    ___   ___    ____   ___     ___   _   _   _____    ___    ____    _   _   ____    _____   _____   _____   __  __   ___        _      __  __   _____   _____ 
+ |  _ \  |_ _| |_ _|  / ___| |_ _|   |_ _| | \ | | |  ___|  / _ \  / ___|  (_) (_) / ___|  |_   _| | ____| | ____| |  \/  | |_ _|      / \    |  \/  | | ____| |_   _|
+ | |_) |  | |   | |  | |  _   | |     | |  |  \| | | |_    | | | | \___ \  | | | | \___ \    | |   |  _|   |  _|   | |\/| |  | |      / _ \   | |\/| | |  _|     | |  
+ |  _ <   | |   | |  | |_| |  | |     | |  | |\  | |  _|   | |_| |  ___) | | |_| |  ___) |   | |   | |___  | |___  | |  | |  | |     / ___ \  | |  | | | |___    | |  
+ |_| \_\ |___| |___|  \____| |___|   |___| |_| \_| |_|      \___/  |____/   \___/  |____/    |_|   |_____| |_____| |_|  |_| |___|   /_/   \_\ |_|  |_| |_____|   |_|  
+                                                                                                                                                                      
+-----------------------------------------------------------------------Authentication Execution Plan of RIIGI INFOS?STEEMI AMET has been loaded----------------------------------------------------------------------->
+2018-07-20 12:58:03,427 WARN [org.apereo.cas.config.support.authentication.AcceptUsersAuthenticationEventExecutionPlanConfiguration] - <[0m>
+2018-07-20 12:58:03,486 DEBUG [org.apereo.cas.authentication.DefaultAuthenticationEventExecutionPlan] - <Registering handler [TaraAuthenticationHandler] principal resolver [ee.ria.sso.authentication.principal.TaraPrincipalResolver@39918c52[]] into the execution plan>
+2018-07-20 12:58:04,337 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Loading services from [JpaServiceRegistryDaoImpl]>
+2018-07-20 12:58:06,148 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:58:06,149 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.212.255.185:8451/oauth/response]>
+2018-07-20 12:58:06,149 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://sso-fe1.arendus.kit/oauth2.0/callbackAuthorize.*]>
+2018-07-20 12:58:06,149 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:58:06,149 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:58:06,150 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:58:06,150 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:58:06,150 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:58:06,150 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:58:06,150 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:58:06,151 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.209.194.132:8451/oauth/response]>
+2018-07-20 12:58:06,151 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.253.6.231:8451/oauth/response]>
+2018-07-20 12:58:06,151 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.208.156.133:8451/oauth/response]>
+2018-07-20 12:58:06,151 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://localhost:8451/oauth/response]>
+2018-07-20 12:58:06,151 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.254.199.82:8451/oauth/response]>
+2018-07-20 12:58:06,151 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.254.253.9:8451/oauth/response]>
+2018-07-20 12:58:06,168 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.19.48.81:8451/oauth/response]>
+2018-07-20 12:58:06,168 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.247.105.166:8451/oauth/response]>
+2018-07-20 12:58:06,168 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.242.115.177:8451/oauth/response]>
+2018-07-20 12:58:06,169 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.245.99.126:8451/oauth/response]>
+2018-07-20 12:58:06,169 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.245.133.138:8451/oauth/response]>
+2018-07-20 12:58:06,171 INFO [org.apereo.cas.services.DefaultServicesManager] - <Loaded [21] service(s) from [JpaServiceRegistryDaoImpl].>
+2018-07-20 12:58:17,372 DEBUG [org.apereo.cas.config.CasConfigurationSupportUtilitiesConfiguration] - <Starting to watch configuration directory [/etc/cas/config]>
+2018-07-20 12:58:18,380 DEBUG [org.apereo.cas.services.ServiceRegistryInitializer] - <Service registry contains [21] service definitions>
+2018-07-20 12:58:18,380 INFO [org.apereo.cas.services.ServiceRegistryInitializer] - <The service registry database will not be initialized from default JSON services. If the service registry database ends up empty, CAS will refuse to authenticate services until service definitions are added to the registry. To auto-initialize the service registry, set 'cas.serviceRegistry.initFromJson=true' in your CAS settings.>
+2018-07-20 12:58:19,301 DEBUG [org.apereo.cas.config.CasCoreTicketsConfiguration] - <Configuring ticket metadata registration plan [CasCoreTicketCatalogConfiguration]>
+2018-07-20 12:58:19,319 DEBUG [org.apereo.cas.config.CasCoreTicketCatalogConfiguration] - <Registering core CAS protocol ticket definitions...>
+2018-07-20 12:58:19,321 DEBUG [org.apereo.cas.ticket.DefaultTicketCatalog] - <Locating ticket definition for [PT]>
+2018-07-20 12:58:19,337 DEBUG [org.apereo.cas.ticket.DefaultTicketCatalog] - <Registering/Updating ticket definition [org.apereo.cas.ticket.DefaultTicketDefinition@17a48374[implementationClass=class org.apereo.cas.ticket.ProxyTicketImpl,prefix=PT]]>
+2018-07-20 12:58:19,338 DEBUG [org.apereo.cas.ticket.DefaultTicketCatalog] - <Locating ticket definition for [ST]>
+2018-07-20 12:58:19,347 DEBUG [org.apereo.cas.ticket.DefaultTicketCatalog] - <Registering/Updating ticket definition [org.apereo.cas.ticket.DefaultTicketDefinition@60380f7a[implementationClass=class org.apereo.cas.ticket.ServiceTicketImpl,prefix=ST]]>
+2018-07-20 12:58:19,348 DEBUG [org.apereo.cas.ticket.DefaultTicketCatalog] - <Locating ticket definition for [PGT]>
+2018-07-20 12:58:19,349 DEBUG [org.apereo.cas.ticket.DefaultTicketCatalog] - <Registering/Updating ticket definition [org.apereo.cas.ticket.DefaultTicketDefinition@42da3695[implementationClass=class org.apereo.cas.ticket.ProxyGrantingTicketImpl,prefix=PGT]]>
+2018-07-20 12:58:19,349 DEBUG [org.apereo.cas.ticket.DefaultTicketCatalog] - <Locating ticket definition for [TGT]>
+2018-07-20 12:58:19,349 DEBUG [org.apereo.cas.ticket.DefaultTicketCatalog] - <Registering/Updating ticket definition [org.apereo.cas.ticket.DefaultTicketDefinition@148ee408[implementationClass=class org.apereo.cas.ticket.TicketGrantingTicketImpl,prefix=TGT]]>
+2018-07-20 12:58:19,350 DEBUG [org.apereo.cas.config.CasCoreTicketsConfiguration] - <Configuring ticket metadata registration plan [OAuthProtocolTicketCatalogConfiguration]>
+2018-07-20 12:58:19,350 DEBUG [org.apereo.cas.config.OAuthProtocolTicketCatalogConfiguration] - <Registering core OAuth protocol ticket definitions...>
+2018-07-20 12:58:19,361 DEBUG [org.apereo.cas.ticket.DefaultTicketCatalog] - <Locating ticket definition for [OC]>
+2018-07-20 12:58:19,362 DEBUG [org.apereo.cas.ticket.DefaultTicketCatalog] - <Registering/Updating ticket definition [org.apereo.cas.ticket.DefaultTicketDefinition@43461909[implementationClass=class org.apereo.cas.ticket.code.OAuthCodeImpl,prefix=OC]]>
+2018-07-20 12:58:19,375 DEBUG [org.apereo.cas.ticket.DefaultTicketCatalog] - <Locating ticket definition for [AT]>
+2018-07-20 12:58:19,376 DEBUG [org.apereo.cas.ticket.DefaultTicketCatalog] - <Registering/Updating ticket definition [org.apereo.cas.ticket.DefaultTicketDefinition@7f487a13[implementationClass=class org.apereo.cas.ticket.accesstoken.AccessTokenImpl,prefix=AT]]>
+2018-07-20 12:58:19,377 DEBUG [org.apereo.cas.ticket.DefaultTicketCatalog] - <Locating ticket definition for [RT]>
+2018-07-20 12:58:19,378 DEBUG [org.apereo.cas.ticket.DefaultTicketCatalog] - <Registering/Updating ticket definition [org.apereo.cas.ticket.DefaultTicketDefinition@3195cf0[implementationClass=class org.apereo.cas.ticket.refreshtoken.RefreshTokenImpl,prefix=RT]]>
+2018-07-20 12:58:19,490 DEBUG [org.apereo.cas.config.CasCoreTicketsSchedulingConfiguration] - <Ticket registry cleaner is enabled>
+2018-07-20 12:58:19,789 INFO [org.reflections.Reflections] - <Reflections took 1 ms to scan 1 urls, producing 3 keys and 7 values >
+2018-07-20 12:58:20,274 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Initializing CAS webflow configuration...>
+2018-07-20 12:58:21,192 DEBUG [org.apereo.cas.config.CasWebAppConfiguration] - <Setting default locale to [et]>
+2018-07-20 12:58:21,852 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Initializing CAS webflow configuration...>
+2018-07-20 12:58:21,869 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created end state state [viewRedirectToUnauthorizedUrlView] on flow id [login], backed by view factory [org.springframework.webflow.engine.support.ActionExecutingViewFactory@34324bb7]>
+2018-07-20 12:58:21,871 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created end state state [viewServiceErrorView] on flow id [login], backed by view factory [org.springframework.webflow.mvc.servlet.ServletMvcViewFactory@89637c0]>
+2018-07-20 12:58:21,872 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created end state state [redirectView] on flow id [login], backed by view factory [org.springframework.webflow.engine.support.ActionExecutingViewFactory@5ccb02cb]>
+2018-07-20 12:58:21,894 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created end state state [postView] on flow id [login], backed by view factory [org.springframework.webflow.mvc.servlet.ServletMvcViewFactory@15fc3b7e]>
+2018-07-20 12:58:21,896 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created end state state [viewGenericLoginSuccess] on flow id [login], backed by view factory [org.springframework.webflow.mvc.servlet.ServletMvcViewFactory@3335a585]>
+2018-07-20 12:58:21,954 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created evaluate action for expression [genericSuccessViewAction]>
+2018-07-20 12:58:21,954 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added view state [showWarningView]>
+2018-07-20 12:58:21,955 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [success] to the state [showWarningView]>
+2018-07-20 12:58:21,955 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created evaluate action for expression [serviceWarningAction]>
+2018-07-20 12:58:21,955 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created action state [finalizeWarning]>
+2018-07-20 12:58:21,955 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added action to the action state [finalizeWarning] list of actions: [list[[EvaluateAction@562f0d32 expression = serviceWarningAction, resultExpression = [null]]]]>
+2018-07-20 12:58:21,956 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [redirect] to the state [finalizeWarning]>
+2018-07-20 12:58:21,980 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created evaluate action for expression [terminateSessionAction]>
+2018-07-20 12:58:21,981 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created action state [terminateSession]>
+2018-07-20 12:58:21,981 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added action to the action state [terminateSession] list of actions: [list[[EvaluateAction@512fea21 expression = terminateSessionAction, resultExpression = [null]]]]>
+2018-07-20 12:58:21,981 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created evaluate action for expression [gatewayServicesManagementCheck]>
+2018-07-20 12:58:21,981 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created action state [gatewayServicesManagementCheck]>
+2018-07-20 12:58:21,981 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added action to the action state [gatewayServicesManagementCheck] list of actions: [list[[EvaluateAction@44c96e1b expression = gatewayServicesManagementCheck, resultExpression = [null]]]]>
+2018-07-20 12:58:21,981 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [success] to the state [gatewayServicesManagementCheck]>
+2018-07-20 12:58:21,981 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created evaluate action for expression [serviceAuthorizationCheck]>
+2018-07-20 12:58:21,994 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created action state [serviceAuthorizationCheck]>
+2018-07-20 12:58:21,994 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added action to the action state [serviceAuthorizationCheck] list of actions: [list[[EvaluateAction@3f17a3b1 expression = serviceAuthorizationCheck, resultExpression = [null]]]]>
+2018-07-20 12:58:21,994 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created evaluate action for expression [redirectToServiceAction]>
+2018-07-20 12:58:21,994 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created action state [redirect]>
+2018-07-20 12:58:21,995 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added action to the action state [redirect] list of actions: [list[[EvaluateAction@11ff6ffc expression = redirectToServiceAction, resultExpression = [null]]]]>
+2018-07-20 12:58:21,996 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [post] to the state [redirect]>
+2018-07-20 12:58:21,996 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [redirect] to the state [redirect]>
+2018-07-20 12:58:21,996 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created evaluate action for expression [authenticationExceptionHandler]>
+2018-07-20 12:58:21,997 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created action state [handleAuthenticationFailure]>
+2018-07-20 12:58:21,997 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added action to the action state [handleAuthenticationFailure] list of actions: [list[[EvaluateAction@3faff100 expression = authenticationExceptionHandler, resultExpression = [null]]]]>
+2018-07-20 12:58:21,997 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [AccountDisabledException] to the state [handleAuthenticationFailure]>
+2018-07-20 12:58:21,997 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [AccountLockedException] to the state [handleAuthenticationFailure]>
+2018-07-20 12:58:21,997 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [AccountPasswordMustChangeException] to the state [handleAuthenticationFailure]>
+2018-07-20 12:58:21,997 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [CredentialExpiredException] to the state [handleAuthenticationFailure]>
+2018-07-20 12:58:21,997 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [InvalidLoginLocationException] to the state [handleAuthenticationFailure]>
+2018-07-20 12:58:21,998 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [InvalidLoginTimeException] to the state [handleAuthenticationFailure]>
+2018-07-20 12:58:21,998 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [FailedLoginException] to the state [handleAuthenticationFailure]>
+2018-07-20 12:58:22,006 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [AccountNotFoundException] to the state [handleAuthenticationFailure]>
+2018-07-20 12:58:22,006 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [UnauthorizedServiceForPrincipalException] to the state [handleAuthenticationFailure]>
+2018-07-20 12:58:22,007 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [PrincipalException] to the state [handleAuthenticationFailure]>
+2018-07-20 12:58:22,007 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [UnsatisfiedAuthenticationPolicyException] to the state [handleAuthenticationFailure]>
+2018-07-20 12:58:22,007 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added transition [UnauthorizedAuthenticationException] to the state [handleAuthenticationFailure]>
+2018-07-20 12:58:22,293 DEBUG [org.apereo.cas.logout.config.CasCoreLogoutConfiguration] - <Configuring logout execution plan [CasCoreLogoutConfiguration]>
+2018-07-20 12:58:22,748 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Initializing CAS webflow configuration...>
+2018-07-20 12:58:22,968 DEBUG [org.apereo.cas.oidc.jwks.OidcJsonWebKeystoreGeneratorService] - <Located JSON web keystore at [/etc/cas/config/oidc.jwks]>
+2018-07-20 12:58:25,938 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Sensitivity for endpoint [AuthenticationEvents] is undefined. Checking defaults...>
+2018-07-20 12:58:25,938 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default sensitivity for endpoint [AuthenticationEvents] is set to [true]>
+2018-07-20 12:58:25,938 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Capability for endpoint [AuthenticationEvents] is undefined. Checking defaults...>
+2018-07-20 12:58:25,938 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default capability for endpoint [AuthenticationEvents] is set to [false]>
+2018-07-20 12:58:25,939 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Finalized capability for endpoint [AuthenticationEvents] is [false].>
+2018-07-20 12:58:29,604 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.fd.usage, value=3.5858154296875E-4>
+2018-07-20 12:58:29,604 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-MarkSweep.count, value=4>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-MarkSweep.time, value=2935>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-Scavenge.count, value=43>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-Scavenge.time, value=5560>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.committed, value=1513619456>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.init, value=1073741824>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.max, value=1908932608>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.usage, value=0.27193934758329613>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.used, value=519113888>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.committed, value=205938688>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.init, value=2555904>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.max, value=-1>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.usage, value=-2.02394088E8>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.used, value=202394088>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.committed, value=44236800>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.init, value=2555904>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.max, value=251658240>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.usage, value=0.17467142740885416>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.used, value=43957504>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.committed, value=17956864>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.init, value=0>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.max, value=1073741824>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.usage, value=0.01617046445608139>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.used, value=17362904>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.committed, value=143745024>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.init, value=0>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.max, value=-1>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.usage, value=0.9814160940972816>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.used, value=141073680>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.committed, value=498597888>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.init, value=268435456>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.max, value=517996544>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.usage, value=0.5186654990501249>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.used, value=268666936>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.used-after-gc, value=0>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.committed, value=913833984>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.init, value=716177408>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.max, value=1431830528>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.usage, value=0.15950732962721131>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.used, value=228387464>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.used-after-gc, value=189019840>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.committed, value=101187584>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.init, value=44564480>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.max, value=101187584>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.usage, value=0.21800587708468264>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.used, value=22059488>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.used-after-gc, value=22059488>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.committed, value=1719558144>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.init, value=1076297728>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.max, value=1908932607>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.used, value=721518016>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.blocked.count, value=0>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.count, value=24>
+2018-07-20 12:58:29,605 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.daemon.count, value=22>
+2018-07-20 12:58:29,656 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.deadlock.count, value=0>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.deadlocks, value=[]>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.new.count, value=0>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.runnable.count, value=6>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.terminated.count, value=0>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.timed_waiting.count, value=11>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.waiting.count, value=7>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_PROXY_GRANTING_TICKET_COUNTER, count=0>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_TICKET_GRANTING_TICKET_COUNTER, count=0>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DELETE_TICKET_COUNTER, count=0>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DESTROY_TICKET_GRANTING_TICKET_COUNTER, count=0>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKETS_COUNTER, count=0>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKET_COUNTER, count=0>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_PROXY_TICKET_COUNTER, count=0>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_SERVICE_TICKET_COUNTER, count=0>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.VALIDATE_SERVICE_TICKET_COUNTER, count=0>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.authentication.PolicyBasedAuthenticationManager.AUTHENTICATE_COUNT, count=0>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_PROXY_GRANTING_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_TICKET_GRANTING_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:29,754 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DELETE_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:29,755 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DESTROY_TICKET_GRANTING_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:29,755 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKETS_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:29,755 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:29,755 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_PROXY_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:29,755 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_SERVICE_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:29,755 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.VALIDATE_SERVICE_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:29,755 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.authentication.PolicyBasedAuthenticationManager.AUTHENTICATE_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:29,757 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_PROXY_GRANTING_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:29,757 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_TICKET_GRANTING_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:29,757 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DELETE_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:29,757 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DESTROY_TICKET_GRANTING_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:29,757 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKETS_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:29,757 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:29,757 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_PROXY_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:29,757 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_SERVICE_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:29,757 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.VALIDATE_SERVICE_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:29,757 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.authentication.PolicyBasedAuthenticationManager.AUTHENTICATE_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:33,409 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Sensitivity for endpoint [Dashboard] is undefined. Checking defaults...>
+2018-07-20 12:58:33,409 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default sensitivity for endpoint [Dashboard] is set to [true]>
+2018-07-20 12:58:33,409 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Capability for endpoint [Dashboard] is undefined. Checking defaults...>
+2018-07-20 12:58:33,409 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default capability for endpoint [Dashboard] is set to [false]>
+2018-07-20 12:58:33,410 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Finalized capability for endpoint [Dashboard] is [false].>
+2018-07-20 12:58:33,896 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Sensitivity for endpoint [AttributeResolution] is undefined. Checking defaults...>
+2018-07-20 12:58:33,896 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default sensitivity for endpoint [AttributeResolution] is set to [true]>
+2018-07-20 12:58:33,896 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Capability for endpoint [AttributeResolution] is undefined. Checking defaults...>
+2018-07-20 12:58:33,896 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default capability for endpoint [AttributeResolution] is set to [false]>
+2018-07-20 12:58:33,897 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Finalized capability for endpoint [AttributeResolution] is [false].>
+2018-07-20 12:58:33,958 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Sensitivity for endpoint [ConfigurationState] is undefined. Checking defaults...>
+2018-07-20 12:58:33,958 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default sensitivity for endpoint [ConfigurationState] is set to [true]>
+2018-07-20 12:58:33,958 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Capability for endpoint [ConfigurationState] is undefined. Checking defaults...>
+2018-07-20 12:58:33,959 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default capability for endpoint [ConfigurationState] is set to [false]>
+2018-07-20 12:58:33,959 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Finalized capability for endpoint [ConfigurationState] is [false].>
+2018-07-20 12:58:34,140 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Sensitivity for endpoint [Status] is undefined. Checking defaults...>
+2018-07-20 12:58:34,141 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default sensitivity for endpoint [Status] is set to [true]>
+2018-07-20 12:58:34,141 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Capability for endpoint [Status] is undefined. Checking defaults...>
+2018-07-20 12:58:34,141 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default capability for endpoint [Status] is set to [false]>
+2018-07-20 12:58:34,141 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Finalized capability for endpoint [Status] is [false].>
+2018-07-20 12:58:34,201 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Sensitivity for endpoint [SingleSignOnReport] is undefined. Checking defaults...>
+2018-07-20 12:58:34,202 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default sensitivity for endpoint [SingleSignOnReport] is set to [true]>
+2018-07-20 12:58:34,202 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Capability for endpoint [SingleSignOnReport] is undefined. Checking defaults...>
+2018-07-20 12:58:34,202 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default capability for endpoint [SingleSignOnReport] is set to [false]>
+2018-07-20 12:58:34,202 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Finalized capability for endpoint [SingleSignOnReport] is [false].>
+2018-07-20 12:58:34,288 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Sensitivity for endpoint [LoggingConfig] is undefined. Checking defaults...>
+2018-07-20 12:58:34,288 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default sensitivity for endpoint [LoggingConfig] is set to [true]>
+2018-07-20 12:58:34,288 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Capability for endpoint [LoggingConfig] is undefined. Checking defaults...>
+2018-07-20 12:58:34,289 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default capability for endpoint [LoggingConfig] is set to [false]>
+2018-07-20 12:58:34,289 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Finalized capability for endpoint [LoggingConfig] is [false].>
+2018-07-20 12:58:34,345 DEBUG [org.apereo.cas.web.report.util.ControllerUtils] - <Located logging configuration reference in the environment as [file:/etc/cas/config/log4j2.xml]>
+2018-07-20 12:58:34,358 DEBUG [org.apereo.cas.web.report.util.ControllerUtils] - <Loaded logging configuration resource [URL [file:/etc/cas/config/log4j2.xml]]. Initializing logger context...>
+2018-07-20 12:58:34,496 DEBUG [org.apereo.cas.web.report.util.ControllerUtils] - <Installing log configuration listener to detect changes and update>
+2018-07-20 12:58:34,599 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Sensitivity for endpoint [SingleSignOnStatus] is undefined. Checking defaults...>
+2018-07-20 12:58:34,600 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default sensitivity for endpoint [SingleSignOnStatus] is set to [true]>
+2018-07-20 12:58:34,600 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Capability for endpoint [SingleSignOnStatus] is undefined. Checking defaults...>
+2018-07-20 12:58:34,600 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default capability for endpoint [SingleSignOnStatus] is set to [false]>
+2018-07-20 12:58:34,600 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Finalized capability for endpoint [SingleSignOnStatus] is [false].>
+2018-07-20 12:58:34,663 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Sensitivity for endpoint [SpringWebflowReport] is undefined. Checking defaults...>
+2018-07-20 12:58:34,664 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default sensitivity for endpoint [SpringWebflowReport] is set to [true]>
+2018-07-20 12:58:34,664 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Capability for endpoint [SpringWebflowReport] is undefined. Checking defaults...>
+2018-07-20 12:58:34,664 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default capability for endpoint [SpringWebflowReport] is set to [false]>
+2018-07-20 12:58:34,665 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Finalized capability for endpoint [SpringWebflowReport] is [false].>
+2018-07-20 12:58:34,737 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Sensitivity for endpoint [Statistics] is undefined. Checking defaults...>
+2018-07-20 12:58:34,738 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default sensitivity for endpoint [Statistics] is set to [true]>
+2018-07-20 12:58:34,738 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Capability for endpoint [Statistics] is undefined. Checking defaults...>
+2018-07-20 12:58:34,738 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default capability for endpoint [Statistics] is set to [false]>
+2018-07-20 12:58:34,739 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Finalized capability for endpoint [Statistics] is [false].>
+2018-07-20 12:58:34,851 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Sensitivity for endpoint [Metrics] is undefined. Checking defaults...>
+2018-07-20 12:58:34,852 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default sensitivity for endpoint [Metrics] is set to [true]>
+2018-07-20 12:58:34,852 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Capability for endpoint [Metrics] is undefined. Checking defaults...>
+2018-07-20 12:58:34,852 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Default capability for endpoint [Metrics] is set to [false]>
+2018-07-20 12:58:34,852 DEBUG [org.apereo.cas.web.report.BaseCasMvcEndpoint] - <Finalized capability for endpoint [Metrics] is [false].>
+2018-07-20 12:58:39,587 DEBUG [org.apereo.cas.support.events.listener.CasConfigurationEventListener] - <Received event [org.springframework.cloud.context.environment.EnvironmentChangeEvent[source=[]]]>
+2018-07-20 12:58:39,596 INFO [org.apereo.cas.support.events.listener.CasConfigurationEventListener] - <Refreshing CAS configuration. Stand by...>
+2018-07-20 12:58:39,597 DEBUG [org.apereo.cas.configuration.CasConfigurationPropertiesEnvironmentManager] - <Reloading CAS configuration via [cas-org.apereo.cas.configuration.CasConfigurationProperties]>
+2018-07-20 12:58:40,968 DEBUG [org.apereo.cas.configuration.CasConfigurationPropertiesEnvironmentManager] - <Reloaded CAS configuration [cas-org.apereo.cas.configuration.CasConfigurationProperties]>
+2018-07-20 12:58:46,435 ERROR [ee.ria.sso.status.HeartbeatEndpoint] - <Failed to initialize application git info>
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.boot.info.GitProperties' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:353) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:351) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:340) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1090) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at ee.ria.sso.status.HeartbeatEndpoint.setApplicationGitProperties(HeartbeatEndpoint.java:160) ~[classes/:5.1.4]
+	at ee.ria.sso.status.HeartbeatEndpoint.setUp(HeartbeatEndpoint.java:87) ~[classes/:5.1.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_171]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:311) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:134) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:400) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.cloud.context.properties.ConfigurationPropertiesRebinder.rebind(ConfigurationPropertiesRebinder.java:107) ~[spring-cloud-context-1.2.0.RELEASE.jar:1.2.0.RELEASE]
+	at org.springframework.cloud.context.properties.ConfigurationPropertiesRebinder.rebind(ConfigurationPropertiesRebinder.java:90) ~[spring-cloud-context-1.2.0.RELEASE.jar:1.2.0.RELEASE]
+	at org.springframework.cloud.context.properties.ConfigurationPropertiesRebinder.onApplicationEvent(ConfigurationPropertiesRebinder.java:138) ~[spring-cloud-context-1.2.0.RELEASE.jar:1.2.0.RELEASE]
+	at org.springframework.cloud.context.properties.ConfigurationPropertiesRebinder.onApplicationEvent(ConfigurationPropertiesRebinder.java:51) ~[spring-cloud-context-1.2.0.RELEASE.jar:1.2.0.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:393) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:347) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration.afterSingletonsInstantiated(ConfigurationPropertiesRebinderAutoConfiguration.java:79) ~[spring-cloud-context-1.2.0.RELEASE.jar:1.2.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:781) ~[spring-beans-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.boot.web.support.SpringBootServletInitializer.run(SpringBootServletInitializer.java:151) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.boot.web.support.SpringBootServletInitializer.createRootApplicationContext(SpringBootServletInitializer.java:131) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.boot.web.support.SpringBootServletInitializer.onStartup(SpringBootServletInitializer.java:86) ~[spring-boot-1.5.3.RELEASE.jar:1.5.3.RELEASE]
+	at org.springframework.web.SpringServletContainerInitializer.onStartup(SpringServletContainerInitializer.java:169) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5244) ~[catalina.jar:8.0.32]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:147) ~[catalina.jar:8.0.32]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725) ~[catalina.jar:8.0.32]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701) ~[catalina.jar:8.0.32]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717) ~[catalina.jar:8.0.32]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:939) ~[catalina.jar:8.0.32]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1812) ~[catalina.jar:8.0.32]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_171]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_171]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_171]
+2018-07-20 12:58:55,763 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Loading services from [JpaServiceRegistryDaoImpl]>
+2018-07-20 12:58:56,362 WARN [org.apereo.cas.config.CasCoreServicesConfiguration] - <Runtime memory is used as the persistence storage for retrieving and persisting service definitions. Changes that are made to service definitions during runtime WILL be LOST upon container restarts.>
+2018-07-20 12:58:56,481 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:58:56,481 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.212.255.185:8451/oauth/response]>
+2018-07-20 12:58:56,481 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://sso-fe1.arendus.kit/oauth2.0/callbackAuthorize.*]>
+2018-07-20 12:58:56,482 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:58:56,482 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:58:56,482 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:58:56,482 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:58:56,483 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:58:56,483 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:58:56,483 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:58:56,483 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.209.194.132:8451/oauth/response]>
+2018-07-20 12:58:56,483 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.253.6.231:8451/oauth/response]>
+2018-07-20 12:58:56,484 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.208.156.133:8451/oauth/response]>
+2018-07-20 12:58:56,492 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://localhost:8451/oauth/response]>
+2018-07-20 12:58:56,492 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.254.199.82:8451/oauth/response]>
+2018-07-20 12:58:56,492 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.254.253.9:8451/oauth/response]>
+2018-07-20 12:58:56,492 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.19.48.81:8451/oauth/response]>
+2018-07-20 12:58:56,492 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.247.105.166:8451/oauth/response]>
+2018-07-20 12:58:56,492 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.242.115.177:8451/oauth/response]>
+2018-07-20 12:58:56,492 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.245.99.126:8451/oauth/response]>
+2018-07-20 12:58:56,493 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.245.133.138:8451/oauth/response]>
+2018-07-20 12:58:56,493 INFO [org.apereo.cas.services.DefaultServicesManager] - <Loaded [21] service(s) from [JpaServiceRegistryDaoImpl].>
+2018-07-20 12:58:56,574 DEBUG [org.apereo.cas.config.CasCoreTicketsConfiguration] - <Protocol tickets generated by CAS are not signed/encrypted.>
+2018-07-20 12:58:57,121 DEBUG [org.apereo.cas.config.CasPersonDirectoryConfiguration] - <Final list of attribute repositories is [[]]>
+2018-07-20 12:58:57,141 DEBUG [org.apereo.cas.config.CasPersonDirectoryConfiguration] - <Configured merging strategy for attribute sources is [REPLACE]>
+2018-07-20 12:58:57,162 DEBUG [org.apereo.cas.config.CasPersonDirectoryConfiguration] - <No attribute repository sources are available/defined to merge together.>
+2018-07-20 12:58:58,673 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Initializing CAS webflow configuration...>
+2018-07-20 12:58:58,674 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added view state [casAuthenticationBlockedView]>
+2018-07-20 12:58:58,674 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added view state [casBadWorkstationView]>
+2018-07-20 12:58:58,675 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added view state [casBadHoursView]>
+2018-07-20 12:58:58,675 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added view state [casAccountLockedView]>
+2018-07-20 12:58:58,675 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added view state [casAccountDisabledView]>
+2018-07-20 12:58:58,676 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Created end state state [casPasswordUpdateSuccess] on flow id [login], backed by view factory [org.springframework.webflow.mvc.servlet.ServletMvcViewFactory@3f3d4787]>
+2018-07-20 12:58:58,676 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Flow [login] already contains a definition for state id [casAccountDisabledView]>
+2018-07-20 12:58:58,689 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added view state [casExpiredPassView]>
+2018-07-20 12:58:58,689 DEBUG [org.apereo.cas.web.flow.AbstractCasWebflowConfigurer] - <Added view state [casMustChangePassView]>
+2018-07-20 12:58:58,755 DEBUG [org.apereo.cas.util.cipher.BaseStringCipherExecutor] - <Located encryption key to use for [Ticket-granting Cookie]>
+2018-07-20 12:58:58,756 DEBUG [org.apereo.cas.util.cipher.BaseStringCipherExecutor] - <Located signing key to use for [Ticket-granting Cookie]>
+2018-07-20 12:58:58,785 DEBUG [org.apereo.cas.util.cipher.BaseStringCipherExecutor] - <Initialized cipher encryption sequence via [A128CBC-HS256]>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.fd.usage, value=3.5858154296875E-4>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-MarkSweep.count, value=4>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-MarkSweep.time, value=2935>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-Scavenge.count, value=47>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-Scavenge.time, value=5973>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.committed, value=1530920960>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.init, value=1073741824>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.max, value=1908932608>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.usage, value=0.19281996570095783>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.used, value=368080320>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.committed, value=210395136>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.init, value=2555904>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.max, value=-1>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.usage, value=-2.07008744E8>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.used, value=207008744>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.committed, value=46596096>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.init, value=2555904>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.max, value=251658240>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.usage, value=0.18420791625976562>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.used, value=46357440>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.committed, value=18219008>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.init, value=0>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.max, value=1073741824>
+2018-07-20 12:58:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.usage, value=0.01638636738061905>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.used, value=17594728>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.committed, value=145580032>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.init, value=0>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.max, value=-1>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.usage, value=0.982666414031287>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.used, value=143056608>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.committed, value=534249472>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.init, value=268435456>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.max, value=554172416>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.usage, value=0.1935800283498773>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.used, value=107276712>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.used-after-gc, value=0>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.committed, value=913833984>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.init, value=716177408>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.max, value=1431830528>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.usage, value=0.1648769595168179>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.used, value=236075864>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.used-after-gc, value=189019840>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.committed, value=82837504>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.init, value=44564480>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.max, value=82837504>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.usage, value=0.298509042474288>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.used, value=24727744>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.used-after-gc, value=24727744>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.committed, value=1741316096>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.init, value=1076297728>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.max, value=1908932607>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.used, value=575089096>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.blocked.count, value=0>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.count, value=24>
+2018-07-20 12:58:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.daemon.count, value=22>
+2018-07-20 12:58:59,625 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.deadlock.count, value=0>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.deadlocks, value=[]>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.new.count, value=0>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.runnable.count, value=7>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.terminated.count, value=0>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.timed_waiting.count, value=10>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.waiting.count, value=7>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_PROXY_GRANTING_TICKET_COUNTER, count=0>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_TICKET_GRANTING_TICKET_COUNTER, count=0>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DELETE_TICKET_COUNTER, count=0>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DESTROY_TICKET_GRANTING_TICKET_COUNTER, count=0>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKETS_COUNTER, count=0>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKET_COUNTER, count=0>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_PROXY_TICKET_COUNTER, count=0>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_SERVICE_TICKET_COUNTER, count=0>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.VALIDATE_SERVICE_TICKET_COUNTER, count=0>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.authentication.PolicyBasedAuthenticationManager.AUTHENTICATE_COUNT, count=0>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_PROXY_GRANTING_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_TICKET_GRANTING_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DELETE_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DESTROY_TICKET_GRANTING_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKETS_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_PROXY_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_SERVICE_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.VALIDATE_SERVICE_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.authentication.PolicyBasedAuthenticationManager.AUTHENTICATE_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:58:59,626 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_PROXY_GRANTING_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:59,627 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_TICKET_GRANTING_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:59,627 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DELETE_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:59,627 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DESTROY_TICKET_GRANTING_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:59,627 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKETS_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:59,627 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:59,627 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_PROXY_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:59,627 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_SERVICE_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:59,627 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.VALIDATE_SERVICE_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:58:59,627 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.authentication.PolicyBasedAuthenticationManager.AUTHENTICATE_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:00,372 DEBUG [org.apereo.cas.web.report.util.ControllerUtils] - <Located logging configuration reference in the environment as [file:/etc/cas/config/log4j2.xml]>
+2018-07-20 12:59:00,373 DEBUG [org.apereo.cas.web.report.util.ControllerUtils] - <Loaded logging configuration resource [URL [file:/etc/cas/config/log4j2.xml]]. Initializing logger context...>
+2018-07-20 12:59:00,373 DEBUG [org.apereo.cas.web.report.util.ControllerUtils] - <Installing log configuration listener to detect changes and update>
+2018-07-20 12:59:00,730 INFO [org.apereo.cas.support.events.listener.DefaultCasEventListener] - <[36m>
+2018-07-20 12:59:00,747 INFO [org.apereo.cas.support.events.listener.DefaultCasEventListener] - <
+
+  ____    _____      _      ____   __   __
+ |  _ \  | ____|    / \    |  _ \  \ \ / /
+ | |_) | |  _|     / _ \   | | | |  \ V / 
+ |  _ <  | |___   / ___ \  | |_| |   | |  
+ |_| \_\ |_____| /_/   \_\ |____/    |_|  
+                                          
+>
+2018-07-20 12:59:00,747 INFO [org.apereo.cas.support.events.listener.DefaultCasEventListener] - <[0m>
+2018-07-20 12:59:00,748 INFO [org.apereo.cas.support.events.listener.DefaultCasEventListener] - <Ready to process requests @ [2018-07-20T12:59:00.730Z]>
+2018-07-20 12:59:00,758 INFO [org.apereo.cas.web.CasWebApplicationServletInitializer] - <Started CasWebApplicationServletInitializer in 124.659 seconds (JVM running for 254.778)>
+2018-07-20 12:59:20,708 DEBUG [org.apereo.cas.authentication.PseudoPlatformTransactionManager] - <Creating new transaction with name [org.apereo.cas.ticket.registry.DefaultTicketRegistryCleaner.clean]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; 'ticketTransactionManager'>
+2018-07-20 12:59:20,709 DEBUG [org.apereo.cas.authentication.PseudoPlatformTransactionManager] - <Creating new transaction with name [org.apereo.cas.ticket.registry.DefaultTicketRegistryCleaner.clean]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; 'ticketTransactionManager'>
+2018-07-20 12:59:20,709 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Loading services from [JpaServiceRegistryDaoImpl]>
+2018-07-20 12:59:20,728 DEBUG [org.apereo.cas.ticket.registry.DefaultTicketRegistryCleaner] - <Attempting to acquire ticket cleanup lock.>
+2018-07-20 12:59:20,728 DEBUG [org.apereo.cas.ticket.registry.DefaultTicketRegistryCleaner] - <Acquired lock. Proceeding with cleanup.>
+2018-07-20 12:59:20,756 DEBUG [org.apereo.cas.ticket.registry.DefaultTicketRegistryCleaner] - <[0] expired tickets found.>
+2018-07-20 12:59:20,757 INFO [org.apereo.cas.ticket.registry.DefaultTicketRegistryCleaner] - <[0] expired tickets removed.>
+2018-07-20 12:59:20,757 DEBUG [org.apereo.cas.ticket.registry.DefaultTicketRegistryCleaner] - <Releasing ticket cleanup lock.>
+2018-07-20 12:59:20,769 DEBUG [org.apereo.cas.ticket.registry.DefaultTicketRegistryCleaner] - <Finished ticket cleanup.>
+2018-07-20 12:59:20,769 DEBUG [org.apereo.cas.authentication.PseudoPlatformTransactionManager] - <Initiating transaction commit>
+2018-07-20 12:59:20,769 DEBUG [org.apereo.cas.authentication.PseudoPlatformTransactionManager] - <Resuming suspended transaction after completion of inner transaction>
+2018-07-20 12:59:20,770 DEBUG [org.apereo.cas.authentication.PseudoPlatformTransactionManager] - <Initiating transaction commit>
+2018-07-20 12:59:21,365 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:59:21,373 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.212.255.185:8451/oauth/response]>
+2018-07-20 12:59:21,374 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://sso-fe1.arendus.kit/oauth2.0/callbackAuthorize.*]>
+2018-07-20 12:59:21,374 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:59:21,374 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:59:21,374 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:59:21,374 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:59:21,375 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:59:21,375 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:59:21,375 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:59:21,375 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.209.194.132:8451/oauth/response]>
+2018-07-20 12:59:21,375 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.253.6.231:8451/oauth/response]>
+2018-07-20 12:59:21,376 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.208.156.133:8451/oauth/response]>
+2018-07-20 12:59:21,376 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://localhost:8451/oauth/response]>
+2018-07-20 12:59:21,376 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.254.199.82:8451/oauth/response]>
+2018-07-20 12:59:21,376 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.254.253.9:8451/oauth/response]>
+2018-07-20 12:59:21,376 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.19.48.81:8451/oauth/response]>
+2018-07-20 12:59:21,377 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.247.105.166:8451/oauth/response]>
+2018-07-20 12:59:21,377 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.242.115.177:8451/oauth/response]>
+2018-07-20 12:59:21,377 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.245.99.126:8451/oauth/response]>
+2018-07-20 12:59:21,385 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.245.133.138:8451/oauth/response]>
+2018-07-20 12:59:21,387 DEBUG [org.apereo.cas.oidc.profile.OidcRegisteredServicePreProcessorEventListener] - <Attempting to reconcile scopes and attributes for service [https://52.19.48.81:8451/oauth/response] of type [OidcRegisteredService]>
+2018-07-20 12:59:21,388 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reconciling scopes and claims for [https://52.19.48.81:8451/oauth/response]>
+2018-07-20 12:59:21,414 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reviewing scope [openid] for [https://52.19.48.81:8451/oauth/response]>
+2018-07-20 12:59:21,414 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <[openid] appears to be a user-defined scope and does not match any of the predefined standard scopes. Checking [openid] against user-defined scopes provided as [[]]>
+2018-07-20 12:59:21,415 WARN [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No attribute release policy could be determined based on given scopes. No claims/attributes will be released to [49]>
+2018-07-20 12:59:21,416 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Scope/claim reconciliation for service [https://52.19.48.81:8451/oauth/response] resulted in the following attribute release policy [org.apereo.cas.services.DenyAllAttributeReleasePolicy@41fd7447[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@5d435a1b[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,excludeDefaultAttributes=true,principalIdAttribute=<null>]]>
+2018-07-20 12:59:21,416 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No changes detected in service [49] after scope/claim reconciliation>
+2018-07-20 12:59:21,416 DEBUG [org.apereo.cas.oidc.profile.OidcRegisteredServicePreProcessorEventListener] - <Attempting to reconcile scopes and attributes for service [https://34.245.133.138:8451/oauth/response] of type [OidcRegisteredService]>
+2018-07-20 12:59:21,416 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reconciling scopes and claims for [https://34.245.133.138:8451/oauth/response]>
+2018-07-20 12:59:21,416 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reviewing scope [openid] for [https://34.245.133.138:8451/oauth/response]>
+2018-07-20 12:59:21,416 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <[openid] appears to be a user-defined scope and does not match any of the predefined standard scopes. Checking [openid] against user-defined scopes provided as [[]]>
+2018-07-20 12:59:21,416 WARN [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No attribute release policy could be determined based on given scopes. No claims/attributes will be released to [59]>
+2018-07-20 12:59:21,416 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Scope/claim reconciliation for service [https://34.245.133.138:8451/oauth/response] resulted in the following attribute release policy [org.apereo.cas.services.DenyAllAttributeReleasePolicy@10e85b64[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@2b66f03e[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,excludeDefaultAttributes=true,principalIdAttribute=<null>]]>
+2018-07-20 12:59:21,430 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No changes detected in service [59] after scope/claim reconciliation>
+2018-07-20 12:59:21,430 DEBUG [org.apereo.cas.oidc.profile.OidcRegisteredServicePreProcessorEventListener] - <Attempting to reconcile scopes and attributes for service [https://34.247.105.166:8451/oauth/response] of type [OidcRegisteredService]>
+2018-07-20 12:59:21,430 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reconciling scopes and claims for [https://34.247.105.166:8451/oauth/response]>
+2018-07-20 12:59:21,430 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reviewing scope [openida] for [https://34.247.105.166:8451/oauth/response]>
+2018-07-20 12:59:21,430 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <[openida] appears to be a user-defined scope and does not match any of the predefined standard scopes. Checking [openida] against user-defined scopes provided as [[]]>
+2018-07-20 12:59:21,431 WARN [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No attribute release policy could be determined based on given scopes. No claims/attributes will be released to [52]>
+2018-07-20 12:59:21,431 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Scope/claim reconciliation for service [https://34.247.105.166:8451/oauth/response] resulted in the following attribute release policy [org.apereo.cas.services.DenyAllAttributeReleasePolicy@113e659[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@4647f7e2[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,excludeDefaultAttributes=true,principalIdAttribute=<null>]]>
+2018-07-20 12:59:21,431 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No changes detected in service [52] after scope/claim reconciliation>
+2018-07-20 12:59:21,431 DEBUG [org.apereo.cas.oidc.profile.OidcRegisteredServicePreProcessorEventListener] - <Attempting to reconcile scopes and attributes for service [https://34.254.253.9:8451/oauth/response] of type [OidcRegisteredService]>
+2018-07-20 12:59:21,431 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reconciling scopes and claims for [https://34.254.253.9:8451/oauth/response]>
+2018-07-20 12:59:21,431 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reviewing scope [openid] for [https://34.254.253.9:8451/oauth/response]>
+2018-07-20 12:59:21,431 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <[openid] appears to be a user-defined scope and does not match any of the predefined standard scopes. Checking [openid] against user-defined scopes provided as [[]]>
+2018-07-20 12:59:21,431 WARN [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No attribute release policy could be determined based on given scopes. No claims/attributes will be released to [50]>
+2018-07-20 12:59:21,431 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Scope/claim reconciliation for service [https://34.254.253.9:8451/oauth/response] resulted in the following attribute release policy [org.apereo.cas.services.DenyAllAttributeReleasePolicy@14a6a735[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@85d429f[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,excludeDefaultAttributes=true,principalIdAttribute=<null>]]>
+2018-07-20 12:59:21,467 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No changes detected in service [50] after scope/claim reconciliation>
+2018-07-20 12:59:21,467 DEBUG [org.apereo.cas.oidc.profile.OidcRegisteredServicePreProcessorEventListener] - <Attempting to reconcile scopes and attributes for service [https://52.212.255.185:8451/oauth/response] of type [OidcRegisteredService]>
+2018-07-20 12:59:21,468 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reconciling scopes and claims for [https://52.212.255.185:8451/oauth/response]>
+2018-07-20 12:59:21,468 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reviewing scope [openid] for [https://52.212.255.185:8451/oauth/response]>
+2018-07-20 12:59:21,468 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <[openid] appears to be a user-defined scope and does not match any of the predefined standard scopes. Checking [openid] against user-defined scopes provided as [[]]>
+2018-07-20 12:59:21,468 WARN [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No attribute release policy could be determined based on given scopes. No claims/attributes will be released to [53]>
+2018-07-20 12:59:21,468 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Scope/claim reconciliation for service [https://52.212.255.185:8451/oauth/response] resulted in the following attribute release policy [org.apereo.cas.services.DenyAllAttributeReleasePolicy@16e24ce3[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@6fe3413a[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,excludeDefaultAttributes=true,principalIdAttribute=<null>]]>
+2018-07-20 12:59:21,468 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No changes detected in service [53] after scope/claim reconciliation>
+2018-07-20 12:59:21,468 DEBUG [org.apereo.cas.oidc.profile.OidcRegisteredServicePreProcessorEventListener] - <Attempting to reconcile scopes and attributes for service [https://52.209.194.132:8451/oauth/response] of type [OidcRegisteredService]>
+2018-07-20 12:59:21,468 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reconciling scopes and claims for [https://52.209.194.132:8451/oauth/response]>
+2018-07-20 12:59:21,468 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reviewing scope [openid] for [https://52.209.194.132:8451/oauth/response]>
+2018-07-20 12:59:21,468 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <[openid] appears to be a user-defined scope and does not match any of the predefined standard scopes. Checking [openid] against user-defined scopes provided as [[]]>
+2018-07-20 12:59:21,469 WARN [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No attribute release policy could be determined based on given scopes. No claims/attributes will be released to [54]>
+2018-07-20 12:59:21,469 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Scope/claim reconciliation for service [https://52.209.194.132:8451/oauth/response] resulted in the following attribute release policy [org.apereo.cas.services.DenyAllAttributeReleasePolicy@4e5ddcfc[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@2cf62612[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,excludeDefaultAttributes=true,principalIdAttribute=<null>]]>
+2018-07-20 12:59:21,469 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No changes detected in service [54] after scope/claim reconciliation>
+2018-07-20 12:59:21,469 DEBUG [org.apereo.cas.oidc.profile.OidcRegisteredServicePreProcessorEventListener] - <Attempting to reconcile scopes and attributes for service [https://34.253.6.231:8451/oauth/response] of type [OidcRegisteredService]>
+2018-07-20 12:59:21,469 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reconciling scopes and claims for [https://34.253.6.231:8451/oauth/response]>
+2018-07-20 12:59:21,469 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reviewing scope [openid] for [https://34.253.6.231:8451/oauth/response]>
+2018-07-20 12:59:21,469 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <[openid] appears to be a user-defined scope and does not match any of the predefined standard scopes. Checking [openid] against user-defined scopes provided as [[]]>
+2018-07-20 12:59:21,469 WARN [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No attribute release policy could be determined based on given scopes. No claims/attributes will be released to [55]>
+2018-07-20 12:59:21,469 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Scope/claim reconciliation for service [https://34.253.6.231:8451/oauth/response] resulted in the following attribute release policy [org.apereo.cas.services.DenyAllAttributeReleasePolicy@28f7e23b[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@5d689c8e[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,excludeDefaultAttributes=true,principalIdAttribute=<null>]]>
+2018-07-20 12:59:21,469 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No changes detected in service [55] after scope/claim reconciliation>
+2018-07-20 12:59:21,469 DEBUG [org.apereo.cas.oidc.profile.OidcRegisteredServicePreProcessorEventListener] - <Attempting to reconcile scopes and attributes for service [https://34.254.199.82:8451/oauth/response] of type [OidcRegisteredService]>
+2018-07-20 12:59:21,470 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reconciling scopes and claims for [https://34.254.199.82:8451/oauth/response]>
+2018-07-20 12:59:21,470 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reviewing scope [openid] for [https://34.254.199.82:8451/oauth/response]>
+2018-07-20 12:59:21,470 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <[openid] appears to be a user-defined scope and does not match any of the predefined standard scopes. Checking [openid] against user-defined scopes provided as [[]]>
+2018-07-20 12:59:21,470 WARN [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No attribute release policy could be determined based on given scopes. No claims/attributes will be released to [56]>
+2018-07-20 12:59:21,470 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Scope/claim reconciliation for service [https://34.254.199.82:8451/oauth/response] resulted in the following attribute release policy [org.apereo.cas.services.DenyAllAttributeReleasePolicy@7d7211e3[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@60a97ee9[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,excludeDefaultAttributes=true,principalIdAttribute=<null>]]>
+2018-07-20 12:59:21,470 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No changes detected in service [56] after scope/claim reconciliation>
+2018-07-20 12:59:21,470 DEBUG [org.apereo.cas.oidc.profile.OidcRegisteredServicePreProcessorEventListener] - <Attempting to reconcile scopes and attributes for service [https://34.242.115.177:8451/oauth/response] of type [OidcRegisteredService]>
+2018-07-20 12:59:21,470 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reconciling scopes and claims for [https://34.242.115.177:8451/oauth/response]>
+2018-07-20 12:59:21,470 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reviewing scope [openid] for [https://34.242.115.177:8451/oauth/response]>
+2018-07-20 12:59:21,470 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <[openid] appears to be a user-defined scope and does not match any of the predefined standard scopes. Checking [openid] against user-defined scopes provided as [[]]>
+2018-07-20 12:59:21,471 WARN [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No attribute release policy could be determined based on given scopes. No claims/attributes will be released to [57]>
+2018-07-20 12:59:21,471 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Scope/claim reconciliation for service [https://34.242.115.177:8451/oauth/response] resulted in the following attribute release policy [org.apereo.cas.services.DenyAllAttributeReleasePolicy@77d8befd[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@6e4dd064[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,excludeDefaultAttributes=true,principalIdAttribute=<null>]]>
+2018-07-20 12:59:21,471 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No changes detected in service [57] after scope/claim reconciliation>
+2018-07-20 12:59:21,471 DEBUG [org.apereo.cas.oidc.profile.OidcRegisteredServicePreProcessorEventListener] - <Attempting to reconcile scopes and attributes for service [https://34.245.99.126:8451/oauth/response] of type [OidcRegisteredService]>
+2018-07-20 12:59:21,471 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reconciling scopes and claims for [https://34.245.99.126:8451/oauth/response]>
+2018-07-20 12:59:21,471 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reviewing scope [openid] for [https://34.245.99.126:8451/oauth/response]>
+2018-07-20 12:59:21,471 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <[openid] appears to be a user-defined scope and does not match any of the predefined standard scopes. Checking [openid] against user-defined scopes provided as [[]]>
+2018-07-20 12:59:21,471 WARN [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No attribute release policy could be determined based on given scopes. No claims/attributes will be released to [58]>
+2018-07-20 12:59:21,471 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Scope/claim reconciliation for service [https://34.245.99.126:8451/oauth/response] resulted in the following attribute release policy [org.apereo.cas.services.DenyAllAttributeReleasePolicy@3dd2947[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@282841e3[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,excludeDefaultAttributes=true,principalIdAttribute=<null>]]>
+2018-07-20 12:59:21,471 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No changes detected in service [58] after scope/claim reconciliation>
+2018-07-20 12:59:21,471 DEBUG [org.apereo.cas.oidc.profile.OidcRegisteredServicePreProcessorEventListener] - <Attempting to reconcile scopes and attributes for service [https://52.208.156.133:8451/oauth/response] of type [OidcRegisteredService]>
+2018-07-20 12:59:21,472 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reconciling scopes and claims for [https://52.208.156.133:8451/oauth/response]>
+2018-07-20 12:59:21,472 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reviewing scope [openid] for [https://52.208.156.133:8451/oauth/response]>
+2018-07-20 12:59:21,472 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <[openid] appears to be a user-defined scope and does not match any of the predefined standard scopes. Checking [openid] against user-defined scopes provided as [[]]>
+2018-07-20 12:59:21,472 WARN [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No attribute release policy could be determined based on given scopes. No claims/attributes will be released to [47]>
+2018-07-20 12:59:21,472 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Scope/claim reconciliation for service [https://52.208.156.133:8451/oauth/response] resulted in the following attribute release policy [org.apereo.cas.services.DenyAllAttributeReleasePolicy@1ab52d4d[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@1a7b108f[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,excludeDefaultAttributes=true,principalIdAttribute=<null>]]>
+2018-07-20 12:59:21,472 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No changes detected in service [47] after scope/claim reconciliation>
+2018-07-20 12:59:21,472 DEBUG [org.apereo.cas.oidc.profile.OidcRegisteredServicePreProcessorEventListener] - <Attempting to reconcile scopes and attributes for service [https://localhost:8451/oauth/response] of type [OidcRegisteredService]>
+2018-07-20 12:59:21,472 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reconciling scopes and claims for [https://localhost:8451/oauth/response]>
+2018-07-20 12:59:21,472 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Reviewing scope [openid] for [https://localhost:8451/oauth/response]>
+2018-07-20 12:59:21,472 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <[openid] appears to be a user-defined scope and does not match any of the predefined standard scopes. Checking [openid] against user-defined scopes provided as [[]]>
+2018-07-20 12:59:21,472 WARN [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No attribute release policy could be determined based on given scopes. No claims/attributes will be released to [48]>
+2018-07-20 12:59:21,473 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <Scope/claim reconciliation for service [https://localhost:8451/oauth/response] resulted in the following attribute release policy [org.apereo.cas.services.DenyAllAttributeReleasePolicy@70069596[attributeFilter=<null>,principalAttributesRepository=org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository@1acbf52c[],authorizedToReleaseCredentialPassword=false,authorizedToReleaseProxyGrantingTicket=false,excludeDefaultAttributes=true,principalIdAttribute=<null>]]>
+2018-07-20 12:59:21,473 DEBUG [org.apereo.cas.oidc.profile.OidcProfileScopeToAttributesFilter] - <No changes detected in service [48] after scope/claim reconciliation>
+2018-07-20 12:59:21,473 INFO [org.apereo.cas.services.DefaultServicesManager] - <Loaded [21] service(s) from [JpaServiceRegistryDaoImpl].>
+2018-07-20 12:59:29,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.fd.usage, value=1.087188720703125E-4>
+2018-07-20 12:59:29,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-MarkSweep.count, value=4>
+2018-07-20 12:59:29,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-MarkSweep.time, value=2935>
+2018-07-20 12:59:29,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-Scavenge.count, value=47>
+2018-07-20 12:59:29,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-Scavenge.time, value=5973>
+2018-07-20 12:59:29,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.committed, value=1530920960>
+2018-07-20 12:59:29,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.init, value=1073741824>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.max, value=1908932608>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.usage, value=0.27639866058592677>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.used, value=527626416>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.committed, value=213344256>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.init, value=2555904>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.max, value=-1>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.usage, value=-2.09713368E8>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.used, value=209713368>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.committed, value=46661632>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.init, value=2555904>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.max, value=251658240>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.usage, value=0.18367589314778646>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.used, value=46223552>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.committed, value=18481152>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.init, value=0>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.max, value=1073741824>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.usage, value=0.01665634661912918>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.used, value=17884616>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.committed, value=148201472>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.init, value=0>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.max, value=-1>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.usage, value=0.9824814695497761>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.used, value=145605200>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.committed, value=534249472>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.init, value=268435456>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.max, value=554172416>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.usage, value=0.4814797710898696>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.used, value=266822808>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.used-after-gc, value=0>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.committed, value=913833984>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.init, value=716177408>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.max, value=1431830528>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.usage, value=0.1648769595168179>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.used, value=236075864>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.used-after-gc, value=189019840>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.committed, value=82837504>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.init, value=44564480>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.max, value=82837504>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.usage, value=0.298509042474288>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.used, value=24727744>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.used-after-gc, value=24727744>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.committed, value=1744265216>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.init, value=1076297728>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.max, value=1908932607>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.used, value=737339784>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.blocked.count, value=0>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.count, value=57>
+2018-07-20 12:59:29,599 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.daemon.count, value=53>
+2018-07-20 12:59:29,618 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.deadlock.count, value=0>
+2018-07-20 12:59:29,628 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.deadlocks, value=[]>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.new.count, value=0>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.runnable.count, value=12>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.terminated.count, value=0>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.timed_waiting.count, value=39>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.waiting.count, value=6>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_PROXY_GRANTING_TICKET_COUNTER, count=0>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_TICKET_GRANTING_TICKET_COUNTER, count=0>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DELETE_TICKET_COUNTER, count=0>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DESTROY_TICKET_GRANTING_TICKET_COUNTER, count=0>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKETS_COUNTER, count=0>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKET_COUNTER, count=0>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_PROXY_TICKET_COUNTER, count=0>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_SERVICE_TICKET_COUNTER, count=0>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.VALIDATE_SERVICE_TICKET_COUNTER, count=0>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.authentication.PolicyBasedAuthenticationManager.AUTHENTICATE_COUNT, count=0>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_PROXY_GRANTING_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_TICKET_GRANTING_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DELETE_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DESTROY_TICKET_GRANTING_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKETS_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_PROXY_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_SERVICE_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.VALIDATE_SERVICE_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:29,629 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.authentication.PolicyBasedAuthenticationManager.AUTHENTICATE_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:29,631 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_PROXY_GRANTING_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:29,631 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_TICKET_GRANTING_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:29,631 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DELETE_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:29,631 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DESTROY_TICKET_GRANTING_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:29,631 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKETS_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:29,631 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:29,631 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_PROXY_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:29,631 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_SERVICE_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:29,631 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.VALIDATE_SERVICE_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:29,631 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.authentication.PolicyBasedAuthenticationManager.AUTHENTICATE_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:56,493 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Loading services from [JpaServiceRegistryDaoImpl]>
+2018-07-20 12:59:56,906 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:59:56,906 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.212.255.185:8451/oauth/response]>
+2018-07-20 12:59:56,915 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://sso-fe1.arendus.kit/oauth2.0/callbackAuthorize.*]>
+2018-07-20 12:59:56,915 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:59:56,916 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:59:56,916 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:59:56,916 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^https://www.apereo.org]>
+2018-07-20 12:59:56,916 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:59:56,916 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:59:56,917 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [^(https|imaps)://.*]>
+2018-07-20 12:59:56,917 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.209.194.132:8451/oauth/response]>
+2018-07-20 12:59:56,917 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.253.6.231:8451/oauth/response]>
+2018-07-20 12:59:56,917 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.208.156.133:8451/oauth/response]>
+2018-07-20 12:59:56,918 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://localhost:8451/oauth/response]>
+2018-07-20 12:59:56,918 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.254.199.82:8451/oauth/response]>
+2018-07-20 12:59:56,918 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.254.253.9:8451/oauth/response]>
+2018-07-20 12:59:56,918 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://52.19.48.81:8451/oauth/response]>
+2018-07-20 12:59:56,927 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.247.105.166:8451/oauth/response]>
+2018-07-20 12:59:56,927 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.242.115.177:8451/oauth/response]>
+2018-07-20 12:59:56,928 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.245.99.126:8451/oauth/response]>
+2018-07-20 12:59:56,928 DEBUG [org.apereo.cas.services.DefaultServicesManager] - <Adding registered service [https://34.245.133.138:8451/oauth/response]>
+2018-07-20 12:59:56,928 INFO [org.apereo.cas.services.DefaultServicesManager] - <Loaded [21] service(s) from [JpaServiceRegistryDaoImpl].>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.fd.usage, value=1.087188720703125E-4>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-MarkSweep.count, value=4>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-MarkSweep.time, value=2935>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-Scavenge.count, value=47>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.gc.PS-Scavenge.time, value=5973>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.committed, value=1530920960>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.init, value=1073741824>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.max, value=1908932608>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.usage, value=0.2803262670234611>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.heap.used, value=535123952>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.committed, value=213606400>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.init, value=2555904>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.max, value=-1>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.usage, value=-2.10284064E8>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.non-heap.used, value=210284064>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.committed, value=46923776>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.init, value=2555904>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.max, value=251658240>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.usage, value=0.18553746541341146>
+2018-07-20 12:59:59,598 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Code-Cache.used, value=46692032>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.committed, value=18481152>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.init, value=0>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.max, value=1073741824>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.usage, value=0.01665833592414856>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Compressed-Class-Space.used, value=17886752>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.committed, value=148201472>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.init, value=0>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.max, value=-1>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.usage, value=0.9831569824083799>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.Metaspace.used, value=145705312>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.committed, value=534249472>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.init, value=268435456>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.max, value=554172416>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.usage, value=0.4950090189981596>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.used, value=274320344>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Eden-Space.used-after-gc, value=0>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.committed, value=913833984>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.init, value=716177408>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.max, value=1431830528>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.usage, value=0.1648769595168179>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.used, value=236075864>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Old-Gen.used-after-gc, value=189019840>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.committed, value=82837504>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.init, value=44564480>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.max, value=82837504>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.usage, value=0.298509042474288>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.used, value=24727744>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.pools.PS-Survivor-Space.used-after-gc, value=24727744>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.committed, value=1744527360>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.init, value=1076297728>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.max, value=1908932607>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=jvm.memory.total.used, value=745408048>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.blocked.count, value=0>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.count, value=57>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.daemon.count, value=53>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.deadlock.count, value=0>
+2018-07-20 12:59:59,599 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.deadlocks, value=[]>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.new.count, value=0>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.runnable.count, value=13>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.terminated.count, value=0>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.timed_waiting.count, value=38>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=GAUGE, name=thread-states.waiting.count, value=6>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_PROXY_GRANTING_TICKET_COUNTER, count=0>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_TICKET_GRANTING_TICKET_COUNTER, count=0>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DELETE_TICKET_COUNTER, count=0>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DESTROY_TICKET_GRANTING_TICKET_COUNTER, count=0>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKETS_COUNTER, count=0>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKET_COUNTER, count=0>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_PROXY_TICKET_COUNTER, count=0>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_SERVICE_TICKET_COUNTER, count=0>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.VALIDATE_SERVICE_TICKET_COUNTER, count=0>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=COUNTER, name=org.apereo.cas.authentication.PolicyBasedAuthenticationManager.AUTHENTICATE_COUNT, count=0>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_PROXY_GRANTING_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_TICKET_GRANTING_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DELETE_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DESTROY_TICKET_GRANTING_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKETS_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_PROXY_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_SERVICE_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.VALIDATE_SERVICE_TICKET_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=METER, name=org.apereo.cas.authentication.PolicyBasedAuthenticationManager.AUTHENTICATE_METER, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_PROXY_GRANTING_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.CREATE_TICKET_GRANTING_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DELETE_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.DESTROY_TICKET_GRANTING_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKETS_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GET_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_PROXY_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.GRANT_SERVICE_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.DefaultCentralAuthenticationService$$EnhancerBySpringCGLIB$$f9817cd7.VALIDATE_SERVICE_TICKET_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
+2018-07-20 12:59:59,600 INFO [perfStatsLogger] - <type=TIMER, name=org.apereo.cas.authentication.PolicyBasedAuthenticationManager.AUTHENTICATE_TIMER, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/millisecond, duration_unit=milliseconds>
